@@ -1,5 +1,5 @@
 const { Client, RichEmbed, Collection } = require("discord.js"); // import some of the components of discord.js
-const { config } = require("dotenv"); // ability to use .env files
+// const { config } = require("dotenv"); // ability to use .env files
 
 const prefix = "."; // defines bot prefix
 
@@ -12,9 +12,9 @@ bot.commands = new Collection(); // create new collection of commands
 bot.aliases = new Collection(); // create new colletion of aliases
 
 // set configuration file (needs to be created if you're using the bot)
-config ({
+/* config ({
     path: __dirname + "/.env" //set the path of the configuration file (if you place it at public git, make sure to gitignore)
-});
+}); */
 
 // create the command array
 ["command"].forEach(handler => {

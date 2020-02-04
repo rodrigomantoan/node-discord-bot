@@ -11,9 +11,8 @@ const bot = new Client({
 bot.commands = new Collection(); // create new collection of commands
 bot.aliases = new Collection(); // create new colletion of aliases
 
-bot.listen(process.env.port || process.env.PORT || 3978, function () {
-    console.log('%s listening to %s', server.name, server.url); 
- });
+var app = require('http');
+app.createServer().listen(process.env.PORT);
 
 // set configuration file (needs to be created if you're using the bot)
 /* config ({

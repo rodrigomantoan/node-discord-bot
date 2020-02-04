@@ -53,3 +53,4 @@ bot.on("message", async message => { // runs whenever a message is sent, conditi
 });
 
 bot.login(process.env.TOKEN); // login the bot using the token
+bot.listen(process.env.PORT || 5000)

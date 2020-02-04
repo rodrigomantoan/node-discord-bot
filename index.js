@@ -3,7 +3,7 @@ const { Client, RichEmbed, Collection } = require("discord.js"); // import some 
 
 const prefix = "."; // defines bot prefix
 
-const keepOnline = require('keepOnline.js'); // keep the bot online
+const keepOnline = require('./keepOnline'); // keep the bot online
 
 // create bot var and disable ability to mention @everyone
 const bot = new Client({

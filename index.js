@@ -3,8 +3,6 @@ const { Client, RichEmbed, Collection } = require("discord.js"); // import some 
 
 const prefix = "."; // defines bot prefix
 
-const keepOnline = require('./keepOnline'); // keep the bot online
-
 // create bot var and disable ability to mention @everyone
 const bot = new Client({
     disableEveryone: true // disables ability to mention @everyone
@@ -12,6 +10,10 @@ const bot = new Client({
 
 bot.commands = new Collection(); // create new collection of commands
 bot.aliases = new Collection(); // create new colletion of aliases
+
+bot.listen(process.env.port || process.env.PORT || 3978, function () {
+    console.log('%s listening to %s', server.name, server.url); 
+ });
 
 // set configuration file (needs to be created if you're using the bot)
 /* config ({

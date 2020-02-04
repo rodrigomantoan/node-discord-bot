@@ -1,6 +1,3 @@
-var http = require('http');
-
-http.createServer(function (req, res) {
-  res.write("I'm alive");
-  res.end();
-}).listen(process.env.PORT);
+var keepOnline = bot.listen(process.env.PORT, function() {
+    console.log('Bot is listening on port ' + listener.address().port);
+  });
